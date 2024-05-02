@@ -1,0 +1,114 @@
+{
+    "questions": [
+        {
+            "question": "What's the largest country in the world?",
+            "answers": [
+                {"text": "Kenya", "correct": false},
+                {"text": "Netherlands", "correct": false},
+                {"text": "Russia", "correct": true},
+                {"text": "Algeria", "correct": false},
+                {"text": "Tanzania", "correct": false}
+            ]
+        },
+        {
+            "question": "What do you call a person that came before another ancestor?",
+            "answers": [
+                {"text": "Stunner", "correct": false},
+                {"text": "Gunner", "correct": false},
+                {"text": "Forester", "correct": false},
+                {"text": "Forerunner", "correct": true},
+                {"text": "Inheritor", "correct": false}
+            ]
+        },
+        {
+            "question": "Which among these is not a musical instrument?",
+            "answers": [
+                {"text": "Trumpet", "correct": false},
+                {"text": "Guitar", "correct": false},
+                {"text": "Jerrycan", "correct": true},
+                {"text": "Piano", "correct": false},
+                {"text": "Xylophone", "correct": false}
+            ]
+        },
+        {
+            "question": "How many are in a pair of dice?",
+            "answers": [
+                {"text": "32", "correct": false},
+                {"text": "42", "correct": true},
+                {"text": "10", "correct": false},
+                {"text": "50", "correct": false},
+                {"text": "12", "correct": false}
+            ]
+        },
+        {
+            "question": "What is the second letter in the Greek alphabet?",
+            "answers": [
+                {"text": "Beta", "correct": true},
+                {"text": "Omega", "correct": false},
+                {"text": "Sigma", "correct": false},
+                {"text": "Alpha", "correct": false},
+                {"text": "Simp", "correct": false}
+            ]
+        },
+        {
+            "question": "Who's the current prime minister of the UK?",
+            "answers": [
+                {"text": "Boris Johnson", "correct": false},
+                {"text": "Tony Blair", "correct": false},
+                {"text": "John Major", "correct": false},
+                {"text": "Theresa May", "correct": false},
+                {"text": "Rishi Sunak", "correct": true}
+            ]
+        },
+        {
+            "question": "In which year did the Titanic sink?",
+            "answers": [
+                {"text": "1971", "correct": false},
+                {"text": "1915", "correct": false},
+                {"text": "1912", "correct": true},
+                {"text": "1909", "correct": false},
+                {"text": "1989", "correct": false}
+            ]
+        },
+        {
+            "question": "Where is the strongest human muscle located?",
+            "answers": [
+                {"text": "Arm", "correct": false},
+                {"text": "Jaw", "correct": true},
+                {"text": "Leg", "correct": false},
+                {"text": "Abdomen", "correct": false},
+                {"text": "Spine", "correct": false}
+            ]
+        },
+        {
+            "question": "Who starred in the movie 'Saturday Night Fever'?",
+            "answers": [
+                {"text": "Tim Roth", "correct": false},
+                {"text": "Bruce Willis", "correct": false},
+                {"text": "Samuel L. Jackson", "correct": false},
+                {"text": "John Travolta", "correct": true},
+                {"text": "Michael B. Jordan", "correct": false}
+            ]
+        },
+        {
+            "question": "Who are the defending champions of the NBA?",
+            "answers": [
+                {"text": "Chicago Bulls", "correct": false},
+                {"text": "Denver Nuggets", "correct": true},
+                {"text": "Boston Celtics", "correct": false},
+                {"text": "Los Angeles Lakers", "correct": false},
+                {"text": "Philadelphia 76ers", "correct": false}
+            ]
+        },
+        {
+            "question": "How many hearts does an octopus have?",
+            "answers": [
+                {"text": "8", "correct": false},
+                {"text": "5", "correct": false},
+                {"text": "4", "correct": false},
+                {"text": "1", "correct": false},
+                {"text": "3", "correct": true}
+            ]
+        }
+    ]
+}
