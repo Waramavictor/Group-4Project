@@ -1,4 +1,4 @@
-const gameappEndpoint = 'http://localhost:4000/questions';
+const gameappEndpoint = 'http://localhost:3000/questions';
 console.log(gameappEndpoint);
 
 let data = [];
@@ -8,7 +8,7 @@ function displayQuestion(index) {
     let myDiv = document.getElementById("root");
     let question = data[index];
     let answers = question.answers.map(answer => {
-        return `<br><input name='answer' type='radio' value='${answer.text}'> ${answer.text}`;
+        return `<br><input class="answer-input" name='answer' type='radio' value='${answer.text}'> <label class="answer-label">${answer.text}</label>`;
     });
 
     let qandA = `
