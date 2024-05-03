@@ -16,31 +16,38 @@
     <nav class="navbar">
         <div class="navdiv">
             <div class="logo">K QUIZ</div>
-            <ul>
+           <div> <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Categories</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
-            </ul>
-            <div class="dropdown">
-                <button class="buttoN">Categories</button>
-                <div class="dropdown-content">
-                    <a href="#">History quiz</a>
-                    <a href="#">general knowledge</a>
-                    <a href="#">science</a>
-                </div>
             </div>
+                <div> <span id="loggedInUsername"></span>
+                    <i id="profile" class="fa-solid fa-user"></i>
+                </div>
+
+
         </div>
     </nav>
 
-    
+    <div id="loginContainer" class="login-container">
+        <span class="close">&times;</span>
+        <h2 class="loggg">Login</h2>
+        <form id="loginForm">
+            <input class="user" type="text" placeholder="USERNAME" id="username" />
+            <input class="pass" type="password" placeholder="PASSWORD" id="password" />
+            <button class="login" type="submit">Login</button>
+        </form>
+    </div>
+
+
 
     <div class="app">
         <h1> GAMES APP</h1>
-        
+
     </div>
     <div id="root">Original content</div>
 </body>
 <script src="Index.js"></script>
 
-</html> hey
+</html> 
