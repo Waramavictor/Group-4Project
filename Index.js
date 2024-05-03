@@ -12,8 +12,10 @@ function displayQuestion(index) {
     });
 
     let qandA = `
-        <p>${question.question}</p>
-        ${answers.join('')}
+        <p class="question">${question.question}</p>
+        <ul class="answers">
+            ${answers.join('')}
+        </ul>
     `;
 
     myDiv.innerHTML = qandA;
@@ -42,7 +44,7 @@ function gameapp() {
         });
 }
 
-document.getElementById("root").addEventListener("change", function(event) {
+document.getElementById("root").addEventListener("change", function (event) {
     if (event.target.matches("input[name='answer']")) {
         let selectedAnswer = document.querySelector("input[name='answer']:checked");
         if (selectedAnswer) {
@@ -54,23 +56,27 @@ document.getElementById("root").addEventListener("change", function(event) {
                 let correctCount = quizResults.filter(result => result).length;
                 let incorrectCount = data.length - correctCount;
                 let resultMessage = `
-                    <p>Quiz Results:</p>
-                    <p>Correct Answers: ${correctCount}</p>
-                    <p>Incorrect Answers: ${incorrectCount}</p>
+                    <p class="result-message">Quiz Results:</p>
+                    <p class="result-message">Correct Answers: ${correctCount}</p>
+                    <p class="result-message">Incorrect Answers: ${incorrectCount}</p>
                     <button id="playAgain">Play Again</button>
                 `;
                 document.getElementById("root").innerHTML = resultMessage;
 
-                document.getElementById("playAgain").addEventListener("click", function() {
+                document.getElementById("playAgain").addEventListener("click", function () {
                     userAnswers = [];
-                    displayQuestion(0);
+                    gameapp();
                 });
             }
         }
     }
 });
 
+
+
+
+
 // Wait for the DOM content to be loaded before accessing elements
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     gameapp(); // Call the function to fetch and display data
 });

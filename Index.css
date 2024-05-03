@@ -1,67 +1,72 @@
-.body{
-    background-image: url(./assets/artifact.webp)
-
+.body {
+    background-image: url(./assets/artifact.web)
 }
 
-.navbar{
-    background-color: slategray;
-    background: slategray;
+.navbar {
+    background-color:rgba(43, 43, 211, 0.651);
+    height:100px;
     border-radius: 8px;
     padding-right: 3%;
     padding-left: 3%;
+    position: static;
+    
 }
 
-.navdiv{
+.navdiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    position: sticky;
+    
 }
-.logo{
-    font-size: 35px;
+
+.logo {
+    font-size: 50px;
     font-weight: 600;
-    color:black;
+    color: whitesmoke;
 }
 
-li{
+li {
     list-style-type: none;
     display: inline-block;
     padding: 10px;
+
 }
 
-li a{
+li a {
     color: black;
-    font-size: 18px;
+    font-size: 35px;
     margin-right: 25px;
     font-weight: bold;
 
 }
 
 #root {
-    max-width: 800px;
-    height: 800px;
+    max-width: 1300px;
+    height: 500px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #7ac6da;
+    background-color: #6063721c;
     border: 2px solid #1155bb;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  p {
+    border-radius: 50px;
+    box-shadow: 0 5px 6px rgba(26, 29, 192, 0.733);
+}
+
+p {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 50px;
-  }
-  
-  input[type="radio"] {
-    margin-right: 10px;
-    
-    
+    text-align: center;
+}
 
-  }
-  
-  button {
+input[type="radio"] {
+    margin-right: 10px;
+
+
+
+}
+
+button {
     display: block;
     width: 100%;
     padding: 10px;
@@ -71,9 +76,48 @@ li a{
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: blue;
-  }
-  
+}
+
+.answer-input {
+    margin-right: 10px;
+    margin-left: 500px;
+    margin-top: 20px;
+    padding-top: 30px;
+
+}
+
+.answer-label {
+    font-size: 2.0em;
+    align-self: center;
+}
+
+.answer label:hoover {
+    background-color: #1155bb;
+    cursor: pointer;
+}
+
+
+button {
+    display: block;
+    margin-top: 200px;
+    padding: 20px;
+    border: 5px;
+    border-radius: 3px;
+    background-color: #7eb3ec;
+    color: #1a1818;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+.header-photo {
+    background-color: #8b90d467;
+    height:800px;
+}
