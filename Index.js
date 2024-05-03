@@ -14,17 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
         gameapp();
     });
 });
-
-
-
+//api for fetching data from the db.json file
 const gameappEndpoint = 'http://localhost:3000/questions';
-console.log(gameappEndpoint);
+console.log(gameappEndpoint); // testing to see if it works properly
 
-let data = [];
+let data = []; //array to shikilia the fetched questions and answers
 let userAnswers = [];
 
 function displayQuestion(index) {
-    let myDiv = document.getElementById("root");
+    let myDiv = document.getElementById("root"); // the one in my html
     let question = data[index];
     let answers = question.answers.map(answer => {
         return `<br><input class="answer-input" name='answer' type='radio' value='${answer.text}'> <label class="answer-label">${answer.text}</label>`;
@@ -37,23 +35,23 @@ function displayQuestion(index) {
         </ul>
     `;
 
-    myDiv.innerHTML = qandA;
+    myDiv.innerHTML = qandA; // shows the questions and answers in the html file
 }
 
 function evaluateQuiz() {
     let results = [];
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) { //iterates through the data until all questions are seen
         let question = data[i];
         let selectedAnswer = userAnswers[i];
         let correctAnswer = question.answers.find(answer => answer.correct).text;
-        results.push(selectedAnswer === correctAnswer);
+        results.push(selectedAnswer === correctAnswer); //checks if question is correct
     }
     return results;
 }
 
 
 function gameapp() {
-    fetch(gameappEndpoint)
+    fetch(gameappEndpoint) //fetches from the one up there
         .then(response => response.json())
         .then(fetchedData => {
             data = fetchedData;
@@ -65,17 +63,17 @@ function gameapp() {
 
 }
 document.getElementById("root").addEventListener("change", function (event) {
-    if (event.target.matches("input[name='answer']")) {
-        let selectedAnswer = document.querySelector("input[name='answer']:checked");
+    if (event.target.matches("input[name='answer']")) { //when the answer is selected the event listener starts working
+        let selectedAnswer = document.querySelector("input[name='answer']:checked"); //checks if the answer is radio type
         if (selectedAnswer) {
             userAnswers.push(selectedAnswer.value);
             if (userAnswers.length < data.length) {
-                displayQuestion(userAnswers.length);
+                displayQuestion(userAnswers.length); //valid answer = being pushed to an array the usedsmth
             } else {
                 let quizResults = evaluateQuiz();
                 let correctCount = quizResults.filter(result => result).length;
-                let incorrectCount = data.length - correctCount;
-                let resultMessage = `
+                let incorrectCount = data.length - correctCount; //when all questions are correct it checks the aanswees and displays it in the evaluate thing part
+                let resultMessage = ` 
                     <p class="result-message">Quiz Results:</p>
                     <p class="result-message">Correct Answers: ${correctCount}</p>
                     <p class="result-message">Incorrect Answers: ${incorrectCount}</p>
@@ -85,7 +83,7 @@ document.getElementById("root").addEventListener("change", function (event) {
 
                 document.getElementById("playAgain").addEventListener("click", function () {
                     userAnswers = [];
-                    gameapp();
+                    gameapp(); //add event listeners to the button for it to start again
                 });
             }
         }
