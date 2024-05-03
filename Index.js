@@ -1,5 +1,5 @@
-const gameappEndpoint = 'http://localhost:4000/questions';
-console.log(gameappEndpoint);
+const gameappEndpoint = 'http://localhost:3000/questions';
+console.log(gameappEndpoint); 
 
 let data = [];
 let userAnswers = [];
@@ -74,3 +74,49 @@ document.getElementById("root").addEventListener("change", function(event) {
 document.addEventListener("DOMContentLoaded", function() {
     gameapp(); // Call the function to fetch and display data
 });
+
+// Get references to the profile icon and the login container
+const profileIcon = document.getElementById('profile');
+const loginContainer = document.getElementById('loginContainer');
+
+// Add event listener to the profile icon
+profileIcon.addEventListener('click', function() {
+  // Toggle the visibility of the login container
+  loginContainer.style.display = loginContainer.style.display === 'block' ? 'none' : 'block';
+});
+
+// Close the login container when the user clicks on the close button
+const closeButton = document.querySelector('.login-container .close');
+closeButton.addEventListener('click', function() {
+  loginContainer.style.display = 'none';
+});
+// Prevent form submission (for demonstration purposes)
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+  });
+  // Prevent form submission (for demonstration purposes)
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get the username from the input field
+    const usernameInput = document.getElementById('username');
+    const username = usernameInput.value.trim();
+    
+    // Hides the login container
+    loginContainer.style.display = 'none';
+  });
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Gets the username from the input field
+    const usernameInput = document.getElementById('username');
+    const username = usernameInput.value.trim();
+    // Displays an allert with the greeting messsage
+   window.alert(`welcome ${username} to K QUIZ`);
+    // Hides the login container
+    loginContainer.style.display = 'none';
+  
+    // Update the content of the profile icon with the logged-in username
+    const loggedInUsername = document.getElementById('loggedInUsername');
+    loggedInUsername.textContent = `${username}`;
+  });
