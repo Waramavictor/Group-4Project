@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Show the quiz section when the button is clicked
         quizSection.classList.remove('hidden');
         // Smooth scroll to the quiz section
-        quizSection.scrollIntoView({ behavior: 'smooth' });
+        quizSection.scrollIntoView({
+            behavior: 'smooth'
+        });
 
         // Here, you can call the function to start your quiz app
         gameapp();

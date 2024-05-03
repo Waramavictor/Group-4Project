@@ -1,16 +1,17 @@
 .body {
-    background-color: #4e4a4a;
+    background-image: url(/assets/htmlwork.avif);
+   
 }
 
 
 .navbar {
     background: transparent;
-    height:100px;
+    height: 100px;
     border-radius: 8px;
     padding-right: 3%;
     padding-left: 3%;
     position: static;
-    
+
 }
 
 .navdiv {
@@ -18,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    
+
 }
 
 .logo {
@@ -37,7 +38,7 @@ li {
 }
 
 li a {
-    color: whitesmoke;
+    color: rgb(142, 198, 247);
     font-size: 35px;
     margin-right: 25px;
     font-weight: bold;
@@ -45,11 +46,11 @@ li a {
 }
 
 #root {
-    max-width: 1300px;
-    height: 500px;
+    max-width: 1000px;
+    height: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #6063721c;
+    background-color: rgba(255, 255, 255, 0.678);
     border: 2px solid #1155bb;
     border-radius: 50px;
     box-shadow: 0 5px 6px rgba(26, 29, 192, 0.733);
@@ -87,7 +88,7 @@ button:hover {
 
 .answer-input {
     margin-right: 10px;
-    margin-left: 500px;
+    margin-left: 300px;
     margin-top: 20px;
     padding-top: 30px;
 
@@ -121,3 +122,12 @@ button:hover {
     background-color: #0069d9;
 }
 
+.result-message {
+    font-size: 48px;
+    color: black;
+    
+}
+
+.result-message:hover {
+    background-color: #0069d9;
+}
