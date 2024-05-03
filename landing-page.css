@@ -1,5 +1,5 @@
 body {
-    background-image: url(/assets/background-hexagonal-futuristic-net_23-2148335790.avif);
+    background-image: url(assets/background-hexagonal-futuristic-net_23-2148335790.avif);
     background-size: cover;
     width: 100%;
     display: flex;
@@ -19,7 +19,8 @@ body {
 }
 
 h1 {
-    font-size: 78px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
     font-weight: 700;
     color: #fff;
     text-shadow: 0 0 10px rgb(205, 230, 233);
@@ -30,6 +31,7 @@ h1 {
 }
 
 p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 35px;
     margin-bottom: 40px;
     color: #fff;
@@ -41,8 +43,9 @@ p {
 #startButton {
     width: 250px;
     height: 80px;
-    background: #3862d6;
-    border: 2px solid #fff;
+    background: #e7c115;
+    border: 5px solid #fff;
+    border-radius: 20px;
     outline: none;
     border-radius: 6px;
     font-size: 20px;
@@ -60,7 +63,7 @@ p {
 
 @keyframes glow {
     from {
-        box-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
+        box-shadow: 0 0 10px #007bff, 0 0 20px #09001d, 0 0 30px #007bff;
     }
     to {
         box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
@@ -68,7 +71,7 @@ p {
 }
 
 #startButton:hover {
-    background-color: black;
+    background-color: #09001d;
     box-shadow: none;
 
 
@@ -100,11 +103,12 @@ p {
 }
 
 .footer ul li a {
-    color: #101111;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #95e6e6;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer ul li a:hover {
-    color: #0056b3; 
+    color: #d5a917; 
 }

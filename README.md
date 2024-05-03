@@ -6,7 +6,7 @@
 
 #### Description 
 
-This project is a quiz website built using JavaScript and a JSON file to store quiz data. It allows users to take quizzes on various topics and see their scores instantly.
+This project is a quiz website built using JavaScript and a JSON file to store quiz data. It allows users to take quizzes on various topics and see their scores at the end of the game.Users can also be able to retake the quiz also at the end of the game.
 
 #### Installation
 
