@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const startButton = document.getElementById('startButton');
+    const quizSection = document.getElementById('quiz');
+
+    startButton.addEventListener('click', function () {
+        // Show the quiz section when the button is clicked
+        quizSection.classList.remove('hidden');
+        // Smooth scroll to the quiz section
+        quizSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Here, you can call the function to start your quiz app
+        gameapp();
+    });
+});
+
+
+
 const gameappEndpoint = 'http://localhost:3000/questions';
 console.log(gameappEndpoint);
 
@@ -32,6 +49,7 @@ function evaluateQuiz() {
     return results;
 }
 
+
 function gameapp() {
     fetch(gameappEndpoint)
         .then(response => response.json())
@@ -42,8 +60,8 @@ function gameapp() {
         .catch(error => {
             console.error('Error fetching the data', error);
         });
-}
 
+}
 document.getElementById("root").addEventListener("change", function (event) {
     if (event.target.matches("input[name='answer']")) {
         let selectedAnswer = document.querySelector("input[name='answer']:checked");
@@ -71,9 +89,6 @@ document.getElementById("root").addEventListener("change", function (event) {
         }
     }
 });
-
-
-
 
 
 // Wait for the DOM content to be loaded before accessing elements

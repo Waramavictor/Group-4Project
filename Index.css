@@ -1,9 +1,10 @@
 .body {
-    background-image: url(./assets/artifact.web)
+    background-color: #4e4a4a;
 }
 
+
 .navbar {
-    background-color:rgba(43, 43, 211, 0.651);
+    background: transparent;
     height:100px;
     border-radius: 8px;
     padding-right: 3%;
@@ -22,8 +23,10 @@
 
 .logo {
     font-size: 50px;
-    font-weight: 600;
-    color: whitesmoke;
+    font-weight: 700;
+    color: #fff;
+    filter: drop-shadow(0 0 5px #09001d);
+    text-decoration: none !important;
 }
 
 li {
@@ -34,7 +37,7 @@ li {
 }
 
 li a {
-    color: black;
+    color: whitesmoke;
     font-size: 35px;
     margin-right: 25px;
     font-weight: bold;
@@ -117,7 +120,4 @@ button {
 button:hover {
     background-color: #0069d9;
 }
-.header-photo {
-    background-color: #8b90d467;
-    height:800px;
-}
+
