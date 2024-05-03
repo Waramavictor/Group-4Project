@@ -1,0 +1,136 @@
+.body {
+    background-image: url(/assets/htmlwork.avif);
+   
+}
+
+
+.navbar {
+    background: transparent;
+    height: 100px;
+    border-radius: 8px;
+    padding-right: 3%;
+    padding-left: 3%;
+    position: static;
+
+}
+
+.navdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    filter: drop-shadow(0 0 5px #09001d);
+    text-decoration: none !important;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+
+}
+
+li a {
+    color: rgb(142, 198, 247);
+    font-size: 35px;
+    margin-right: 25px;
+    font-weight: bold;
+
+}
+
+#root {
+    max-width: 1000px;
+    height: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.678);
+    border: 2px solid #1155bb;
+    border-radius: 50px;
+    box-shadow: 0 5px 6px rgba(26, 29, 192, 0.733);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    width: 25px;
+    height: 20px;
+    cursor:cell;
+
+
+
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+.answer-input {
+    margin-right: 10px;
+    margin-left: 300px;
+    margin-top: 20px;
+    padding-top: 30px;
+
+}
+
+.answer-label {
+    font-size: 2.0em;
+    align-self: center;
+}
+
+.answer label:hoover {
+    background-color: #1155bb;
+    cursor: pointer;
+}
+
+
+button {
+    display: block;
+    margin-top: 200px;
+    padding: 20px;
+    border: 5px;
+    border-radius: 3px;
+    background-color: #7eb3ec;
+    color: #1a1818;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+
+.result-message {
+    font-size: 48px;
+    color: black;
+    
+}
+
+.result-message:hover {
+    background-color: #0069d9;
+}

@@ -1,4 +1,23 @@
-const gameappEndpoint = 'http://localhost:4000/questions';
+document.addEventListener("DOMContentLoaded", function () {
+    const startButton = document.getElementById('startButton');
+    const quizSection = document.getElementById('quiz');
+
+    startButton.addEventListener('click', function () {
+        // Show the quiz section when the button is clicked
+        quizSection.classList.remove('hidden');
+        // Smooth scroll to the quiz section
+        quizSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        // Here, you can call the function to start your quiz app
+        gameapp();
+    });
+});
+
+
+
+const gameappEndpoint = 'http://localhost:3000/questions';
 console.log(gameappEndpoint);
 
 let data = [];
@@ -8,12 +27,14 @@ function displayQuestion(index) {
     let myDiv = document.getElementById("root");
     let question = data[index];
     let answers = question.answers.map(answer => {
-        return `<br><input name='answer' type='radio' value='${answer.text}'> ${answer.text}`;
+        return `<br><input class="answer-input" name='answer' type='radio' value='${answer.text}'> <label class="answer-label">${answer.text}</label>`;
     });
 
     let qandA = `
-        <p>${question.question}</p>
-        ${answers.join('')}
+        <p class="question">${question.question}</p>
+        <ul class="answers">
+            ${answers.join('')}
+        </ul>
     `;
 
     myDiv.innerHTML = qandA;
@@ -30,6 +51,7 @@ function evaluateQuiz() {
     return results;
 }
 
+
 function gameapp() {
     fetch(gameappEndpoint)
         .then(response => response.json())
@@ -40,9 +62,9 @@ function gameapp() {
         .catch(error => {
             console.error('Error fetching the data', error);
         });
-}
 
-document.getElementById("root").addEventListener("change", function(event) {
+}
+document.getElementById("root").addEventListener("change", function (event) {
     if (event.target.matches("input[name='answer']")) {
         let selectedAnswer = document.querySelector("input[name='answer']:checked");
         if (selectedAnswer) {
@@ -54,23 +76,24 @@ document.getElementById("root").addEventListener("change", function(event) {
                 let correctCount = quizResults.filter(result => result).length;
                 let incorrectCount = data.length - correctCount;
                 let resultMessage = `
-                    <p>Quiz Results:</p>
-                    <p>Correct Answers: ${correctCount}</p>
-                    <p>Incorrect Answers: ${incorrectCount}</p>
+                    <p class="result-message">Quiz Results:</p>
+                    <p class="result-message">Correct Answers: ${correctCount}</p>
+                    <p class="result-message">Incorrect Answers: ${incorrectCount}</p>
                     <button id="playAgain">Play Again</button>
                 `;
                 document.getElementById("root").innerHTML = resultMessage;
 
-                document.getElementById("playAgain").addEventListener("click", function() {
+                document.getElementById("playAgain").addEventListener("click", function () {
                     userAnswers = [];
-                    displayQuestion(0);
+                    gameapp();
                 });
             }
         }
     }
 });
 
+
 // Wait for the DOM content to be loaded before accessing elements
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     gameapp(); // Call the function to fetch and display data
 });
