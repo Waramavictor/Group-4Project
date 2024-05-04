@@ -112,3 +112,58 @@ p {
 .footer ul li a:hover {
     color: #d5a917; 
 }
+ 
+  #profile {
+    font-size: 24px; 
+    cursor: pointer; 
+    top:10px;
+    right:10px; 
+    color: #09001d;
+  }
+
+.login-container {
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    background-color: rgba(82, 125, 218, 0.705); 
+    padding: 50px; 
+    box-shadow: 0 0 10px rgba(205, 236, 29, 0.918); 
+  }
+  
+  .close {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    cursor: pointer; 
+    color: #09001d;
+    font-size: 28px;
+  }
+  
+  
+  #loginForm {
+    display: flex; 
+    flex-direction: column; 
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    margin-bottom: 10px; 
+    padding: 10px; 
+    border: 1px solid aliceblue; 
+    border-radius: 3px; 
+  }
+  
+  .loginbtn {
+    padding: 10px; 
+    background-color: #2859c5; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 3px; 
+    cursor: pointer; 
+  }
+  
+  
+  .loginbtn:hover {
+    background-color: #555; 
+  }
+  
